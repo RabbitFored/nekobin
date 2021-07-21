@@ -38,15 +38,17 @@ type Database struct {
 }
 
 func NewDatabase(cfg *config.Database) *Database {
-	db := sqlx.Connect("postgres", cfg.URI)
-
+	db,err := sqlx.Connect("postgres", cfg.URI)
+	if err != nil {
+        log.Println(err)
+    }
 	db.SetMaxIdleConns(cfg.MaxIdleConns)
 	db.SetMaxOpenConns(cfg.MaxOpenConns)
 	db.SetConnMaxLifetime(cfg.ConnMaxLifetime * time.Second)
 
 	err := db.Ping()
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
 	}
 
 	return &Database{
