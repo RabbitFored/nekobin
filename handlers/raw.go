@@ -31,8 +31,8 @@ import (
 
 	"github.com/labstack/echo/v4"
 
-	"github.com/nekobin/nekobin/database"
-	"github.com/nekobin/nekobin/response"
+	"github.com/RabbitFored/nekobin/database"
+	"github.com/RabbitFored/nekobin/response"
 )
 
 func GetRawDocument(ctx echo.Context) error {
