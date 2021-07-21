@@ -30,9 +30,9 @@ import (
 
 	"github.com/labstack/echo/v4"
 
-	"github.com/nekobin/nekobin/config"
-	"github.com/nekobin/nekobin/database"
-	"github.com/nekobin/nekobin/response"
+	"github.com/RabbitFored/nekobin/config"
+	"github.com/RabbitFored/nekobin/database"
+	"github.com/RabbitFored/nekobin/response"
 )
 
 func GetAbout(ctx echo.Context) error {
