@@ -38,7 +38,7 @@ type Database struct {
 }
 
 func NewDatabase(cfg *config.Database) *Database {
-	db := sqlx.MustConnect("postgres", cfg.URI)
+	db := sqlx.Connect("postgres", cfg.URI)
 
 	db.SetMaxIdleConns(cfg.MaxIdleConns)
 	db.SetMaxOpenConns(cfg.MaxOpenConns)
