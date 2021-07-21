@@ -31,7 +31,7 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/nekobin/nekobin/limiter"
+	"github.com/RabbitFored/nekobin/limiter"
 )
 
 type (
