@@ -30,7 +30,7 @@ import (
 
 	"github.com/jmoiron/sqlx"
 
-	"github.com/nekobin/nekobin/config"
+	"github.com/RabbitFored/nekobin/config"
 )
 
 type Database struct {
