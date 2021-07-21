@@ -1,4 +1,4 @@
-module github.com/nekobin/nekobin
+module github.com/RabbitFored/nekobin
 
 go 1.14
 
