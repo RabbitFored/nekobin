@@ -32,7 +32,7 @@ import (
 
 	"github.com/jmoiron/sqlx"
 
-	"github.com/nekobin/nekobin/keygen"
+	"github.com/RabbitFored/nekobin/keygen"
 )
 
 type Document struct {
