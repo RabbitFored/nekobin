@@ -46,7 +46,7 @@ func NewDatabase(cfg string) *Database {
 	db.SetMaxOpenConns(20)
 	db.SetConnMaxLifetime(1800 * time.Second)
 
-	err := db.Ping()
+	err = db.Ping()
 	if err != nil {
 		log.Println(err)
 	}
