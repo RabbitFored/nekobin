@@ -37,8 +37,8 @@ type Database struct {
 	Documents DocumentsQuery
 }
 
-func NewDatabase(cfg *config.Database) *Database {
-	db,err := sqlx.Connect("postgres", cfg.URI)
+func NewDatabase(cfg string) *Database {
+	db,err := sqlx.Connect("postgres", cfg)
 	if err != nil {
         log.Println(err)
     }
