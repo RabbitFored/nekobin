@@ -30,7 +30,7 @@ import (
 
 	"github.com/jmoiron/sqlx"
 
-	"github.com/RabbitFored/nekobin/config"
+	_ "github.com/RabbitFored/nekobin/config"
 )
 
 type Database struct {
@@ -42,9 +42,9 @@ func NewDatabase(cfg string) *Database {
 	if err != nil {
         log.Println(err)
     }
-	db.SetMaxIdleConns(cfg.MaxIdleConns)
-	db.SetMaxOpenConns(cfg.MaxOpenConns)
-	db.SetConnMaxLifetime(cfg.ConnMaxLifetime * time.Second)
+	db.SetMaxIdleConns(5)
+	db.SetMaxOpenConns(20)
+	db.SetConnMaxLifetime(1800 * time.Second)
 
 	err := db.Ping()
 	if err != nil {
