@@ -51,6 +51,7 @@ func NewDatabase(cfg string) *Database {
 		log.Println(err)
 	}
 
+	
 	return &Database{
 		Documents: NewDocuments(db),
 	}
